@@ -1,0 +1,51 @@
+<form class="signup" #signupForm="ngForm" (ngSubmit)="createAccount(signupForm)">
+  <h2>Sign up for making new account</h2>
+
+  <label for="fname">First name</label>
+  <input
+   required
+   #fname="ngModel"
+   name="fname"
+   ngModel
+   type="text"
+   id="fname">
+
+  <div class="error" *ngIf="submitted && !fname.valid">First name is required</div>
+
+  <label for="lname">Last name</label>
+  <input
+   required
+   #lname="ngModel"
+   name="lname"
+   ngModel type="text" id="lname">
+
+  <div class="error" *ngIf="submitted && !lname.valid">Last name is required</div>
+
+  <label for="username">username</label>
+  <input
+   required
+   #username="ngModel"
+   name="username"
+   ngModel
+   type="text"
+   id="username">
+
+  <div class="error" *ngIf="submitted && !username.valid">username is required</div>
+
+  <label for="password">password</label>
+  <input
+   required
+   #password="ngModel"
+   name="password"
+   ngModel
+   type="password"
+   id="password">
+
+  <div class="error" *ngIf="submitted && !password.valid">password is required</div>
+
+  <button type="submit">Sign up</button>
+
+  <p>Already have an account ? You can
+     <a [routerLink]="['/login']">log in here</a>
+  </p>
+</form>

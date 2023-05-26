@@ -1,0 +1,26 @@
+<form class="login" #loginForm = "ngForm" (ngSubmit)="login(loginForm)">
+  <h2>Login</h2>
+  <label for="username">username</label>
+  <input
+   required
+   ngModel
+   #username="ngModel"
+   name="username"
+   type="text"
+   id="username">
+  <div class="error" *ngIf="submitted && !username.valid">Enter the username</div>
+
+  <label for="password">password</label>
+  <input
+   required
+   type="password"
+   ngModel
+   #password="ngModel"
+   name="password"
+   id="password">
+  <div class="error"*ngIf="submitted && !password.valid">Enter the password</div>
+
+  <button type="submit" >login to your account</button>
+
+  <p>Don't have an account? <a [routerLink]="['']">sign in here</a></p>
+</form>

@@ -1,56 +1,16 @@
 <navbar></navbar>
-<section class="welcome-page">
+<div class="welcome-page">
 
-  <div class="form">
-    <div class="signup" *ngIf="!loginPanel">
-      <h2>Sign up for making new account</h2>
-      <label for="fname">First name</label>
-      <input type="text" id="fname">
-      <div class="error">Enter the name</div>
+  <section class="form">
+    <router-outlet></router-outlet>
+  </section>
 
-
-      <label for="lname">Last name</label>
-      <input type="text" id="lname">
-      <div class="error">Enter the name</div>
-
-      <label for="username">username</label>
-      <input type="text" id="username">
-      <div class="error">Enter the name</div>
-
-      <label for="password">password</label>
-      <input type="text" id="password">
-      <div class="error">Enter the name</div>
-
-      <button type="submit">Sign up</button>
-
-      <p>Already have an account ? You can log in here</p>
-    </div>
-
-    <div class="login" *ngIf="loginPanel">
-      <h2>Login</h2>
-      <label for="username">username</label>
-      <input type="text" id="username">
-      <div class="error">Enter the name</div>
-
-      <label for="password">password</label>
-      <input type="text" id="password">
-      <div class="error">Enter the name</div>
-
-      <button type="submit">login to your account</button>
-
-      <p>Don't have an account? sign in here</p>
-    </div>
-
-
-
-  </div>
-
-  <div class="welcome">
-    <div class="main">Organize your work and life, finally.</div>
+  <section class="intro-text">
+    <h2>Organize your work and life, finally.</h2>
     <p>
       Become focused, organized and calm with Todo list. the world #1 task manager and to do list-app
     </p>
     <img src="../../assets/Images/List.png" alt="List">
-  </div>
+  </section>
 
-</section>
+</div>

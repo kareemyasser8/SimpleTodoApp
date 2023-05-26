@@ -1,0 +1,48 @@
+@use '../helpers/variables' as vars;
+@use '../components/inputs' as inputs;
+@use '../components/buttons' as btns;
+
+form {
+  align-self: stretch;
+  // @include mixins.center;
+  padding: 0px 20px 0px 20px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input:last-of-type{
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: vars.$heading-font;
+}
+
+label {
+  font-family: vars.$heading-font;
+}
+
+button {
+  width: 100%;
+}
+
+.error{
+  font-family: vars.$main-font;
+  color: vars.$main-color;
+}
+
+p {
+  font-family: vars.$main-font;
+  text-align: center;
+  a{
+    color: vars.$main-color;
+    cursor: pointer;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+}
+

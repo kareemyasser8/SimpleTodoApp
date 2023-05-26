@@ -1,0 +1,19 @@
+@use '../helpers/variables' as vars;
+
+button{
+  background-color: vars.$main-color;
+  color: white;
+  border: none;
+  border-radius: vars.$btns-border-radius;
+  font-weight: bolder;
+  padding: 8px;
+  width: max-content;
+  font-size: vars.$button-font-size;
+  font-family: vars.$main-font;
+}
+
+button:hover{
+  cursor: pointer;
+  transition: 0.1s ease;
+  background-color: vars.$hovered-color;
+}

@@ -1,0 +1,98 @@
+@use '../helpers/variables' as vars;
+@use '../helpers/mixins' as mixins;
+
+.welcome-page {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  padding: 20px;
+  // border: 1px solid green;
+  min-height: calc(100vh - 100px);
+  background-color: white;
+  @include mixins.center;
+
+  h2 {
+    font-family: vars.$heading-font;
+  }
+
+  label {
+    font-family: vars.$heading-font;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .error{
+    font-family: vars.$main-font;
+    color: vars.$main-color;
+  }
+
+  p {
+    font-family: vars.$main-font;
+    text-align: center;
+  }
+
+  .welcome {
+    // border: 1px solid red;
+    align-self: stretch;
+    border-left: 1px solid rgb(192, 190, 190);
+    padding: 0px 10px 0px 10px;
+    flex-direction: column;
+    max-width: 500px;
+    @include mixins.center;
+
+    .main {
+      text-align: center;
+      font-family: vars.$heading-font;
+      font-size: vars.$heading-font-size;
+    }
+
+    img {
+      width: 40%;
+    }
+  }
+
+  .form {
+
+    width: 60%;
+    align-self: stretch;
+    // @include mixins.center;
+    padding: 0px 20px 0px 20px;
+
+    .signup {
+      // border: 1px solid green;
+      width: 100%;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .login{
+      width: 100%;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
+
+h1 {
+  font-family: vars.$heading-font;
+}
+
+@media screen and (max-width: vars.$medium-devices) {
+
+  .welcome-page {
+    .welcome {
+      display: none;
+    }
+
+    .form {
+      width: 90%;
+      border: none;
+    }
+  }
+}

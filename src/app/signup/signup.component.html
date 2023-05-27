@@ -49,3 +49,7 @@
      <a [routerLink]="['/login']">log in here</a>
   </p>
 </form>
+
+<ul>
+  <li *ngFor="let user of displayedUsers">{{user.fname}}</li>
+</ul>
